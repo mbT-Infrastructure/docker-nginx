@@ -17,7 +17,7 @@ for DOMAIN in $CERTBOT_DOMAINS; do
         CERTBOT_ADDITIONAL_COMMANDS+=" --staging"
     fi
     certbot certonly --non-interactive --nginx \
-        --email "$CERTBOT_EMAIL" \
+        --max-log-backups 0 --email "$CERTBOT_EMAIL" \
         --rsa-key-size "$CERTBOT_RSA_KEY_SIZE" \
         --domain "$DOMAIN" $CERTBOT_ADDITIONAL_COMMANDS
 done
