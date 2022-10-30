@@ -4,7 +4,7 @@ This Docker image contains a nginx and certbot install.
 
 ## Environment variables
 
-- `ENV CERTBOT_AGREE_TOS`
+- `CERTBOT_AGREE_TOS`
     - Set to `true` to agree to the Terms of Service from certbot ACME
 - `CERTBOT_DOMAINS`
     - List of domains for certificates from certbot. For example `CERTBOT_DOMAINS=madebytimo.de web.madebytimo.de`
