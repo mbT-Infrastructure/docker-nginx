@@ -4,6 +4,7 @@ RUN apt update && apt install -y certbot nginx python3-certbot-nginx && rm -rf /
 
 RUN rm --recursive /etc/nginx/sites-available
 RUN rm --recursive /etc/nginx/sites-enabled
+RUN rm --recursive /etc/letsencrypt
 COPY ./nginx.conf /etc/nginx/nginx.conf
 
 RUN mkdir --parents /media/nginx

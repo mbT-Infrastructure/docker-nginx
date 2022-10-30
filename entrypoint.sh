@@ -5,7 +5,7 @@ mkdir --parents /media/nginx/configuration
 mkdir --parents /media/nginx/certs
 mkdir --parents /media/nginx/letsencrypt
 
-ln --symbolic /media/nginx/letsencrypt /etc/letsencrypt/
+ln --symbolic --force /media/nginx/letsencrypt /etc
 
 for DOMAIN in $CERTBOT_DOMAINS; do
     echo "Getting cert for $DOMAIN"
